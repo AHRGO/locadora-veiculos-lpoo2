@@ -49,12 +49,46 @@ public class ClienteTableModel extends AbstractTableModel {
         };
     }
 
-    //CRUDZÃO
+    //removeCliente
+
     public void adicionaCliente(Cliente cliente) {
         this.linhas.add(cliente);
 //        this.fireTableDataChanged(); ?? this shit works?? try it later
         this.fireTableRowsInserted(linhas.size()-1, linhas.size()-1);
     }
 
-//    public Cliente
+    public void setListaClientes(List<Cliente> clientes) {
+        this.linhas = clientes;
+        this.fireTableDataChanged();
+    }
+
+    public void limpaTabela() {
+        int primeiraLinha = 0;
+        int ultimaLinha = linhas.size()-1;
+
+
+        if(ultimaLinha < 0) ultimaLinha = 0;
+
+        this.linhas = new ArrayList<>();
+        this.fireTableRowsDeleted(primeiraLinha, ultimaLinha);
+    }
+
+    public Cliente getCliente(int linhaIndex) {
+        return linhas.get(linhaIndex);
+    }
+
+    public boolean removeCliente(Cliente cliente) {
+        int indexOndeEstavaCliente = this.linhas.indexOf(cliente);
+        boolean clienteFoiRemovido = this.linhas.remove(cliente);
+
+        this.fireTableRowsDeleted(indexOndeEstavaCliente, indexOndeEstavaCliente);
+        return clienteFoiRemovido;
+    }
+
+    public void removeMultiplosClientes(List<Cliente> clientes) {
+        clientes.forEach(this::removeCliente);
+    }
+
+
+
 }
