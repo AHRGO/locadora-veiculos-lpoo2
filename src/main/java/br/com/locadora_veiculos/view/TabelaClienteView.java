@@ -3,7 +3,7 @@ package br.com.locadora_veiculos.view;
 import javax.swing.*;
 
 public class TabelaClienteView extends javax.swing.JPanel{
-    //TODO: INCLUIR MÉTODO QUE CHAMA O INIT
+    private ClienteTableModel clienteTableModel = new ClienteTableModel();
 
     private void initPanel() {
         JScrollPane scrollPane = new JScrollPane();
