@@ -97,6 +97,11 @@ public class ClienteDaoSql implements ClienteDao{
     }
 
     @Override
+    public void deleteFromList(List<Cliente> clientes) throws Exception {
+
+    }
+
+    @Override
     public void deleteAll() throws Exception {
 
     }
