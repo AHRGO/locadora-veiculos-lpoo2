@@ -78,6 +78,10 @@ public class JanelaClienteView extends javax.swing.JFrame {
         EventQueue.invokeLater(() -> this.setVisible(true));
     }
 
+    public Cliente getClienteFormulario() {
+        return this.formularioClienteView.getClienteFormulario();
+    }
+
     public void inserirClienteView(Cliente cliente) {
         tabelaClienteView.inserirClienteNaTabela(cliente)
     }
