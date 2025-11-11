@@ -56,8 +56,113 @@ public class FormularioClienteView extends javax.swing.JPanel {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        GroupLayout layout = new GroupLayout(this);
+        this.setLayout(layout);
+
+
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(labelNome)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoNome)
+                    )
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(labelSobrenome)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoSobrenome)
+                    )
+                    .adGroup(layout.createSequentialGroup()
+                        .addComponent(labelRg)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoRg)
+                    )
+                    .adGroup(layout.createSequentialGroup()
+                        .addComponent(labelCpf)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoCpf)
+                    )
+                    .adGroup(layout.createSequentialGroup()
+                        .addComponent(labelEndereco)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoEndereco)
+                    )
+                )
+                .addContainerGap()
+            )
+            
+        );
+
+        layout.setVerticalGroup(
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelNome)
+                    .addComponent(campoNome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSobrenome)
+                    .addComponent(campoSobrenome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                )
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelRg)
+                    .addComponent(campoRg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                )
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelCpf)
+                    .addComponent(campoCpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                )
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelEndereco)
+                    .addComponent(campoEndereco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                )
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+            )
+        );
     }
 
+    public void setCliente(Cliente cliente) {
+        this.clienteSelecionadoParaAtualizacao = cliente;
+        campoNome.setText(cliente.getNome());
+        campoSobrenome.setText(cliente.getSobrenome());
+        campoRg.setText(cliente.getRg());
+        campoCpf.setText(cliente.getCpf());
+        campoEndereco.setText(cliente.getEndereco());
+    }
+
+    public void limparClienteParaAtualizar() {
+        clienteSelecionadoParaAtualizacao = null;
+    }
+
+    public Cliente getClienteParaAtualizar() {
+        if(clienteSelecionadoParaAtualizacao == null) return null;
+
+        clienteSelecionadoParaAtualizacao.setNome(campoNome.getText());
+        clienteSelecionadoParaAtualizacao.setSobrenome(campoSobrenome.getText());
+        clienteSelecionadoParaAtualizacao.setRg(campoRg.getText());
+        clienteSelecionadoParaAtualizacao.setCpf(campoCpf.getText());
+        clienteSelecionadoParaAtualizacao.setEndereco(campoEndereco.getText());
+
+        return clienteSelecionadoParaAtualizacao;
+    }
+
+    public Cliente getClienteFormulario() {
+        String nome = campoNome.getText();
+        String sobrenome = campoSobrenome.getText();
+        String rg = campoRg.getText();
+        String cpf = campoCpf.getText();
+        String endereco = campoEndereco.getText();
+
+        return new Cliente(nome, sobrenome, rg, cpf, endereco);
+    }
 
 
 }
