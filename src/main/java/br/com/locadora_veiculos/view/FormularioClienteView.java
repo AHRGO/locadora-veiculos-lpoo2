@@ -23,7 +23,7 @@ public class FormularioClienteView extends javax.swing.JPanel {
     private JLabel labelEndereco;
 
     public FormularioClienteView() {
-//        initComponents();
+       initComponents();
     }
 
     private void initComponents() {

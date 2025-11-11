@@ -11,7 +11,7 @@ public class BotoesClienteView extends javax.swing.JPanel {
     private JButton botaoExcluir;
 
     public BotoesClienteView() {
-//        initComponents();
+       initComponents();
     }
 
 
