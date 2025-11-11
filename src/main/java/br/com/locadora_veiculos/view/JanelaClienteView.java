@@ -26,7 +26,7 @@ public class JanelaClienteView extends javax.swing.JFrame {
     }
 
 
-    public void aprensentaErro(String erro) {
+    public void apresentaErro(String erro) {
         JOptionPane.showMessageDialog(null, erro + "\n", "Erro", JOptionPane.ERROR_MESSAGE);
     }
 
@@ -86,6 +86,8 @@ public class JanelaClienteView extends javax.swing.JFrame {
         tabelaClienteView.setJanelaView(this);
         EventQueue.invokeLater(() -> this.setVisible(true));
     }
+
+
 
     public Cliente getClienteFormulario() {
         return this.formularioClienteView.getClienteFormulario();

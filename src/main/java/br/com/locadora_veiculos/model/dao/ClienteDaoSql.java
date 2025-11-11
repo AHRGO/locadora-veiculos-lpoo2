@@ -105,26 +105,4 @@ public class ClienteDaoSql implements ClienteDao{
     public void deleteAll() throws Exception {
 
     }
-
-//    @Override
-//    public Long criaCliente(Cliente cliente, Endereco endereco) {
-//
-//        return 0L;
-//    }
-//
-//    @Override
-//    public Cliente getClienteById(Long clienteId) {
-//
-//        return null;
-//    }
-//
-//    @Override
-//    public void atualizaClienteById(Long clienteId) {
-//
-//    }
-//
-//    @Override
-//    public void deleteClienteById(Long clienteId) {
-//
-//    }
 }
