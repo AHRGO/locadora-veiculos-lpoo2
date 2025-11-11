@@ -26,6 +26,15 @@ public class JanelaClienteView extends javax.swing.JFrame {
     }
 
 
+    public void aprensentaErro(String erro) {
+        JOptionPane.showMessageDialog(null, erro + "\n", "Erro", JOptionPane.ERROR_MESSAGE);
+    }
+
+    public void apresentaInfo(String info) {
+        JOptionPane.showMessageDialog(null,info + "\n", "Informação", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+
     private void initComponents() {
         botoesClienteView = new BotoesClienteView();
         formularioClienteView = new FormularioClienteView();
@@ -86,10 +95,6 @@ public class JanelaClienteView extends javax.swing.JFrame {
         tabelaClienteView.inserirClienteNaTabela(cliente)
     }
 
-    public void aprensentaErro(String erro) {
-        JOptionPane.showMessageDialog(null, erro + "\n", "Erro", JOptionPane.ERROR_MESSAGE);
-    }
-
     public void mostrarListaClientes(List<Cliente> listaClientes) {
         tabelaClienteView.setListaClientesTabela(listaClientes);
     }
@@ -113,12 +118,5 @@ public class JanelaClienteView extends javax.swing.JFrame {
     public void limparClienteAtualizar() {
         formularioClienteView.limparClienteParaAtualizar();
     }
-
-    public void apresentaInfo(String info) {
-        JOptionPane.showMessageDialog(null,info + "\n", "Informação", JOptionPane.INFORMATION_MESSAGE);
-    }
-
-    
-
 
 }
