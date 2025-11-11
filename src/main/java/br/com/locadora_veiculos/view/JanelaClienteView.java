@@ -4,17 +4,14 @@ import br.com.locadora_veiculos.controller.ClienteController;
 
 public class JanelaClienteView extends javax.swing.JFrame {
     private BotoesClienteView botoesClienteView;
-//    private FormularioClienteView formularioClienteView;
-    private TabelaClienteView tabelaClienteView;
+    private FormularioClienteView formularioClienteView;
+    // private TabelaClienteView tabelaClienteView;
 
     public JanelaClienteView() {
 //        initComponents();
     }
 
-    public void setController(
-            //TODO: CRIAR CLIENTE CONTROLLER
-        ClienteController controller
-    ) {
+    public void setController(ClienteController controller) {
         //TODO: CRIAR BOTOES CLIENTE VIEW
 //        botoesClienteView.setController(controller);
     }
