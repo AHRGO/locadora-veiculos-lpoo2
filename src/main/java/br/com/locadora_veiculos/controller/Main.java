@@ -8,10 +8,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        ClienteDao modelDao = DaoFactory.getClienteDao();
-//        List<Cliente> clientes =  modelDao.readAll();
+        JanelaClienteView view = new JanelaClienteView();
+        ClienteDao model = DaoFactory.getClienteDao();
+        ClienteController controller = new ClienteController(view, model);
 
-        System.out.println();
-        System.out.println("TÁ RODANDO!");
     }
 }

@@ -45,7 +45,6 @@ public class ClienteController {
        }
     }
 
-    //TODO: FINALIZAR MÉTODO NO DAO
     public void atualizarCliente() {
         try {
            Cliente cliente = view.getClienteParaAtualizar();
@@ -62,7 +61,6 @@ public class ClienteController {
         }
     }
 
-    //TODO: FINALIZAR MÉTODO NO DAO
     public void excluirCliente() {
         try {
            List<Cliente> clientesParaExcluir = view.getClientesParaExcluir();
