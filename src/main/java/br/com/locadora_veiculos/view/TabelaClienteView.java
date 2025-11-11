@@ -58,6 +58,10 @@ public class TabelaClienteView extends javax.swing.JPanel {
         this.janela = janela;
     }
 
+    public void inserirClienteNaTabela(Cliente cliente) {
+        clienteTableModel.adicionaCliente(cliente);
+    }
+
     public void setListaClientesTabela(List<Cliente> clientes) {
         clienteTableModel.setListaClientes(clientes);
     }
