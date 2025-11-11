@@ -88,21 +88,43 @@ public class ClienteDaoSql implements ClienteDao{
 
     @Override
     public void updateOne(Cliente cliente) throws Exception {
+        try(Connection connection = ConnectionFactory.getConnection();
+            PreparedStatement updateStatement = connection.prepareStatement(update);
+        ) {
+            updateStatement.setString(1, cliente.getNome());
+            updateStatement.setString(2, cliente.getSobrenome());
+            updateStatement.setString(3, cliente.getRg());
+            updateStatement.setString(4, cliente.getCpf());
+            updateStatement.setString(5, cliente.getEndereco());
 
+            insertStatement.executeUpdate();
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
     }
 
     @Override
     public void deleteOne(Cliente cliente) throws Exception {
-
+        try(Connection connection = ConnectionFactory.getConnection();
+            PreparedStatement deleteByIdStatement = connection.prepareStatement(delete);
+        ) {
+            deleteByIdStatement.setString(1, cliente.getId());
+            deleteByIdStatement.executeUpdate();
+        }
     }
 
     @Override
     public void deleteFromList(List<Cliente> clientes) throws Exception {
-
+        for(Cliente cliente:clientes) {
+            deleteOne(cliente);
+        }
     }
 
     @Override
     public void deleteAll() throws Exception {
-
+        try(Connection connection = ConnectionFactory.getConnection();
+            PreparedStatement deleteAllStatement = connection.prepareStatement(deleteAll);
+            deleteAllStatement.executeUpdate();
+        )
     }
 }
