@@ -13,15 +13,15 @@ public class JanelaClienteView extends javax.swing.JFrame {
     private FormularioClienteView formularioClienteView;
     private TabelaClienteView tabelaClienteView;
 
-    private BotoesClienteView getBotoesClienteView() {
+    public BotoesClienteView getBotoesClienteView() {
         return botoesClienteView;
     }
 
-    private FormularioClienteView getFormularioClienteView() {
+    public FormularioClienteView getFormularioClienteView() {
         return formularioClienteView;
     }
 
-    private TabelaClienteView getTabelaClienteView() {
+    public TabelaClienteView getTabelaClienteView() {
         return tabelaClienteView;
     }
 

@@ -52,8 +52,7 @@ public class TabelaClienteView extends javax.swing.JPanel {
 
         Cliente cliente = clienteTableModel.getCliente(linhaClicadaParaAtualizacao);
 
-        //TODO: CRIAR MÉTODO SET CONTATO NA JANELA VIEW
-//        janela.getFormularioClienteView().setContato(contato);
+        janela.getFormularioClienteView().setCliente(cliente);
     }
 
     public JTable getTabelaCliente() {
@@ -77,7 +76,6 @@ public class TabelaClienteView extends javax.swing.JPanel {
         int[] linhasSelecionadas = this.getTabelaCliente().getSelectedRows();
         List<Cliente> clientesParaExcluir = new ArrayList<>();
 
-        //TODO: VALIDAR UMA FORMA MAIS EFICIENTE DE FAZER ISSO AQUI
         for (int i = 0; i < linhasSelecionadas.length; i++) {
             Cliente cliente = clienteTableModel.getCliente(linhasSelecionadas[i]);
             clientesParaExcluir.add(cliente);

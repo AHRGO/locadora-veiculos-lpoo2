@@ -17,7 +17,7 @@ public class ClienteDaoSql implements ClienteDao{
     private final String selectAll = "SELECT * FROM cliente";
     private final String selectById = "SELECT * FROM cliente WHERE id_cliente = ?";
     private final String update = "UPDATE cliente SET nome = ?, sobrenome = ?, rg = ?, cpf = ?, endereco = ? WHERE id_cliente = ?";
-    private final String delete = "DELETE FROM cliente WHERE cliente_id = ?";
+    private final String delete = "DELETE FROM cliente WHERE id_cliente = ?";
     private final String deleteAll = "DELETE FROM cliente";
 
     private ClienteDaoSql() {}
