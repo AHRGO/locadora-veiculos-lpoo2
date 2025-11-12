@@ -24,14 +24,6 @@ public class Cliente {
         this.endereco =  endereco;
     }
 
-//    public Cliente(String nome, String sobrenome, String rg, String cpf, String endereco) {
-//        this.nome =  nome;
-//        this.sobrenome =  sobrenome;
-//        this.rg =  rg;
-//        this.cpf =  cpf;
-//        this.endereco =  endereco;
-//    }
-//
 
 
     public Long getId() {return this.id;}
@@ -74,7 +66,7 @@ public class Cliente {
 
 
     public static Cliente convertFromDao(ResultSet result) throws SQLException {
-        Long id = result.getLong("id");
+        Long id = result.getLong("id_cliente");
         String nome = result.getString("nome");
         String sobrenome = result.getString("sobrenome");
         String rg = result.getString("rg");
