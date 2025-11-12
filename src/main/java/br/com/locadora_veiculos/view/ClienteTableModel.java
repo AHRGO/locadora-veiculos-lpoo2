@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteTableModel extends AbstractTableModel {
-    private String[] colunas = new String[]{"id, Nome, Sobrenome, RG, CPF, Endereço"};
+    private String[] colunas = new String[]{"id", "Nome", "Sobrenome", "RG", "CPF", "Endereço"};
     private List<Cliente> linhas = new ArrayList<>();
 
 
@@ -49,8 +49,6 @@ public class ClienteTableModel extends AbstractTableModel {
         };
     }
 
-    //removeCliente
-
     public void adicionaCliente(Cliente cliente) {
         this.linhas.add(cliente);
 //        this.fireTableDataChanged(); ?? this shit works?? try it later
@@ -88,7 +86,5 @@ public class ClienteTableModel extends AbstractTableModel {
     public void removeMultiplosClientes(List<Cliente> clientes) {
         clientes.forEach(this::removeCliente);
     }
-
-
 
 }
