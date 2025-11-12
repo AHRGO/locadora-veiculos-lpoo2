@@ -13,7 +13,13 @@ public class Cliente {
     private String cpf;
     private String endereco;
 
-    public Cliente(String nome, String sobrenome, String rg, String cpf, String endereco) {}
+    public Cliente(String nome, String sobrenome, String rg, String cpf, String endereco) {
+        this.nome =  nome;
+        this.sobrenome =  sobrenome;
+        this.rg =  rg;
+        this.cpf =  cpf;
+        this.endereco =  endereco;
+    }
 
     public Cliente(Long id, String nome, String sobrenome, String rg, String cpf, String endereco) {
         this.id = id;
