@@ -95,6 +95,7 @@ public class ClienteDaoSql implements ClienteDao{
             updateStatement.setString(3, cliente.getRg());
             updateStatement.setString(4, cliente.getCpf());
             updateStatement.setString(5, cliente.getEndereco());
+            updateStatement.setLong(6, cliente.getId());
 
             updateStatement.executeUpdate();
         } catch(Exception e) {
