@@ -1,14 +1,20 @@
 package br.com.locadora_veiculos.view;
 
+import br.com.locadora_veiculos.model.Cliente;
+
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TabelaClienteView extends javax.swing.JPanel {
     private ClienteTableModel clienteTableModel = new ClienteTableModel();
-    private JanelaClienteView JanelaClienteView janela;
+    private JanelaClienteView janela;
     private int linhaClicadaParaAtualizacao = -1;
 
-    private JScrollPane scrollPane //javax.swing.JScrollPane
-    private JTable tabelaCliente //javax.swing.JTable
+    private JScrollPane scrollPane; //javax.swing.JScrollPane
+    private JTable tabelaCliente; //javax.swing.JTable
 
     public TabelaClienteView() {
         initComponents();
@@ -38,7 +44,7 @@ public class TabelaClienteView extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
-        )
+        );
     }
 
     private void tabelaClienteMouseClicked(MouseEvent event) {
@@ -46,7 +52,8 @@ public class TabelaClienteView extends javax.swing.JPanel {
 
         Cliente cliente = clienteTableModel.getCliente(linhaClicadaParaAtualizacao);
 
-        janela.getFormularioClienteView().setContato(contato);
+        //TODO: CRIAR MÉTODO SET CONTATO NA JANELA VIEW
+//        janela.getFormularioClienteView().setContato(contato);
     }
 
     public JTable getTabelaCliente() {
@@ -75,6 +82,8 @@ public class TabelaClienteView extends javax.swing.JPanel {
             Cliente cliente = clienteTableModel.getCliente(linhasSelecionadas[i]);
             clientesParaExcluir.add(cliente);
         }
+
+        return clientesParaExcluir;
     }
 
     public void excluirClientesDaTabela(List<Cliente> clientesParaExcluir) {
@@ -82,7 +91,7 @@ public class TabelaClienteView extends javax.swing.JPanel {
     }
 
     public void atualizarClienteNaTabela(Cliente cliente) {
-        clienteTableModel.fireTableRowsUpdated(linhaClicadaParaAtualizacao, linhaClicadaParaAtualizacao)
+        clienteTableModel.fireTableRowsUpdated(linhaClicadaParaAtualizacao, linhaClicadaParaAtualizacao);
     }
 
 }

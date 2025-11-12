@@ -1,6 +1,12 @@
 package br.com.locadora_veiculos.view;
 
+
 import br.com.locadora_veiculos.controller.ClienteController;
+import br.com.locadora_veiculos.model.Cliente;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.List;
 
 public class JanelaClienteView extends javax.swing.JFrame {
     private BotoesClienteView botoesClienteView;
@@ -15,7 +21,7 @@ public class JanelaClienteView extends javax.swing.JFrame {
         return formularioClienteView;
     }
 
-    private tabelaClienteView gettabelaClienteView() {
+    private TabelaClienteView getTabelaClienteView() {
         return tabelaClienteView;
     }
 
@@ -94,7 +100,7 @@ public class JanelaClienteView extends javax.swing.JFrame {
     }
 
     public void inserirClienteView(Cliente cliente) {
-        tabelaClienteView.inserirClienteNaTabela(cliente)
+        tabelaClienteView.inserirClienteNaTabela(cliente);
     }
 
     public void mostrarListaClientes(List<Cliente> listaClientes) {

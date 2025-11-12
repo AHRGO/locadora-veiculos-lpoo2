@@ -18,7 +18,7 @@ public class ConnectionFactory {
         if (dbProperties == null) {
             Properties propsFromFile = new Properties();
             FileInputStream fileWithProps = new FileInputStream(
-                    ".src/main/java/br/com/locadora_veiculos/model/dao/DatabaseProperties.properties"
+                    "src/main/java/br/com/locadora_veiculos/model/dao/DatabaseProperties.properties"
             );
             propsFromFile.load(fileWithProps);
             dbProperties = propsFromFile;

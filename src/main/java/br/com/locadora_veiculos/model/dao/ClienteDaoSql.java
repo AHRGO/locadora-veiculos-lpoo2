@@ -1,7 +1,6 @@
 package br.com.locadora_veiculos.model.dao;
 
 import br.com.locadora_veiculos.model.Cliente;
-import br.com.locadora_veiculos.model.Endereco;
 
 import javax.xml.transform.Result;
 import java.sql.Connection;
@@ -97,7 +96,7 @@ public class ClienteDaoSql implements ClienteDao{
             updateStatement.setString(4, cliente.getCpf());
             updateStatement.setString(5, cliente.getEndereco());
 
-            insertStatement.executeUpdate();
+            updateStatement.executeUpdate();
         } catch(Exception e) {
             throw new Exception(e);
         }
@@ -108,7 +107,7 @@ public class ClienteDaoSql implements ClienteDao{
         try(Connection connection = ConnectionFactory.getConnection();
             PreparedStatement deleteByIdStatement = connection.prepareStatement(delete);
         ) {
-            deleteByIdStatement.setString(1, cliente.getId());
+            deleteByIdStatement.setLong(1, cliente.getId());
             deleteByIdStatement.executeUpdate();
         }
     }
@@ -124,7 +123,9 @@ public class ClienteDaoSql implements ClienteDao{
     public void deleteAll() throws Exception {
         try(Connection connection = ConnectionFactory.getConnection();
             PreparedStatement deleteAllStatement = connection.prepareStatement(deleteAll);
+        ) {
             deleteAllStatement.executeUpdate();
-        )
+        }
+        //TODO: ADICIONAR O CATCH
     }
 }
