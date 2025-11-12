@@ -8,14 +8,13 @@ O novo sistema precisa
 - seguindo o paradigma orientado a objetos.
 
 # Requisitos
-## 1. Uma tela para manter `(incluir, atualizar, excluir e listar)` os clientes da empresa (Nome, sobre nome, RG, CPF,
-   Endereço)
-	- a. Nesta tela deve ser possível **listar** todos os clientes (Use AbstractTableModel)
-   	- b. Deve ser possível **atualizar** os dados de um cliente.
-   	- c. Deve ser possível **excluir** um cliente que **não possua veículos locados**. 
-        Se houver uma tentativa de exclusão de clientes com veículos locados 
-         uma mensagem do sistema deve informar ao usuário que o cliente não pode ser excluído.
-   	- d. Deve ser possível **listar todos os clientes em uma tabela** (Utilize AbstractTableModel)
+## 1. Uma tela para manter `(incluir, atualizar, excluir e listar)` os clientes da empresa (Nome, sobre nome, RG, CPF, Endereço)
+- a. Nesta tela deve ser possível **listar** todos os clientes (Use AbstractTableModel)
+- b. Deve ser possível **atualizar** os dados de um cliente.
+- c. Deve ser possível **excluir** um cliente que **não possua veículos locados**. 
+    Se houver uma tentativa de exclusão de clientes com veículos locados 
+     uma mensagem do sistema deve informar ao usuário que o cliente não pode ser excluído.
+- d. Deve ser possível **listar todos os clientes em uma tabela** (Utilize AbstractTableModel)
 
 ## 2. Uma tela para incluir os veículos novos quando são comprados
 - a. Deve-se utilizar herança para definir os veículos. Uma `classe Veículo (abstrata)` deve ser criada. A classe
