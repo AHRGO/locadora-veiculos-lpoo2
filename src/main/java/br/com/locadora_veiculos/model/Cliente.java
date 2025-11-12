@@ -76,7 +76,6 @@ public class Cliente {
         return new Cliente(id, nome, sobrenome, rg, cpf, endereco);
     }
 
-    //TODO: list.stream().map(Classe::metodoConvert).toList()
 
     public static List<Cliente> converListFromDao(ResultSet result) throws SQLException {
         List<Cliente> clientes = new ArrayList<>();
