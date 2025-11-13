@@ -1,6 +1,9 @@
 package br.com.locadora_veiculos.model.veiculo;
 
 import br.com.locadora_veiculos.model.cliente.Cliente;
+import br.com.locadora_veiculos.model.veiculo.enums.Categoria;
+import br.com.locadora_veiculos.model.veiculo.enums.Estado;
+import br.com.locadora_veiculos.model.veiculo.enums.Marca;
 
 import java.util.Calendar;
 
@@ -27,14 +30,13 @@ public interface VeiculoI {
      */
     public void devolver();
 
-    //? vai ser um enum isso?
-//    public Estado getEstado();
+    public Estado getEstado();
 
-//    public Marca getMarca();
+    public Marca getMarca();
     
-//    public Categoria getCategoria();
+    public Categoria getCategoria();
 
-//    public Locacao getLocacao();
+    public Locacao getLocacao();
 
     public String getPlaca();
 
