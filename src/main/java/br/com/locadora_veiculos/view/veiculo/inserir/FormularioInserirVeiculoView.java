@@ -1,16 +1,29 @@
+package br.com.vic;
+
 //TODO
 public class FormularioInserirVeiculoView extends JPanel {
     //private Cliente clienteSelecionadoParaAtualizacao;
 
-    private JTextField campoMarca;
- //Alterar para ComboBox    
-
-private JTextField campoTipoVeiculo; //Alterar para ComboBox
-
-
+    /*
+     * 
+     * 
+     * private double valorDaCompra;
+        private String placa;
+        private int ano;
+     * 
+     * 
+     * */
+     
+    
+    
+    private JTextField campoMarca; //Alterar para ComboBox
+    private JTextField campoEstado; //Combobox
+    private JTextField campoCategoria; //Combobox
+    private JTextField campoValorDaCompra;
+    private JTextField campoAno;
+    private JTextField campoTipoVeiculo; //Alterar para ComboBox
     private JFormattedTextField campoPlaca; //Adicionar validador + mascara
-
-
+    
     private JFormattedTextField campoModeloVeiculo; //Alterar para ComboBox; depende do tipo do veículo 
 
 //TODO: Criar método que itera por sobre os enums e devolve uma lista de Strings, sendo esta o textoExibicao
@@ -28,14 +41,14 @@ conforme mudam-se os valores, são carregados os modelos específicos do veiculo
 
 //Quaisquer outros campos necessários
 
-    private JTextField campoEndereco;
-    private JLabel labelNome;
-    private JLabel labelSobrenome;
-    private JLabel labelRg;
-    private JLabel labelCpf;
-    private JLabel labelEndereco;
+    //private JTextField campoEndereco;
+    private JLabel labelMarca;
+    private JLabel labelTipoVeiculo;
+    private JLabel labelPlaca;
+    private JLabel labelModeloVeiculo;
+    //private JLabel labelEndereco;
 
-    public FormularioClienteView() {
+    public FormularioInserirVeiculoView() {
        initComponents();
     }
 
@@ -190,3 +203,5 @@ conforme mudam-se os valores, são carregados os modelos específicos do veiculo
 
 
 }
+
+    
