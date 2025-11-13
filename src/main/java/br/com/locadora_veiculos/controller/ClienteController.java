@@ -61,6 +61,7 @@ public class ClienteController {
         }
     }
 
+    //TODO: ATUALIZAR REGRA PARA NÃO EXCLUIR UM CLIENTE COM VEÍCULO LOCADO
     public void excluirCliente() {
         try {
            List<Cliente> clientesParaExcluir = view.getClientesParaExcluir();
