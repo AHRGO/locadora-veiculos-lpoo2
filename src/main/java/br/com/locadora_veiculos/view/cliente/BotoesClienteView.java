@@ -1,4 +1,4 @@
-package br.com.locadora_veiculos.view;
+package br.com.locadora_veiculos.view.cliente;
 
 import br.com.locadora_veiculos.controller.ClienteController;
 

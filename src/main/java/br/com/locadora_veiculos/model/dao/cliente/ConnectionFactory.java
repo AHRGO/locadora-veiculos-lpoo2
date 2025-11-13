@@ -1,4 +1,4 @@
-package br.com.locadora_veiculos.model.dao;
+package br.com.locadora_veiculos.model.dao.cliente;
 
 import java.io.FileInputStream;
 import java.io.IOException;

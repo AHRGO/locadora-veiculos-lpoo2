@@ -1,12 +1,10 @@
-package br.com.locadora_veiculos.model.dao;
+package br.com.locadora_veiculos.model.dao.cliente;
 
 import br.com.locadora_veiculos.model.Cliente;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClienteDaoSql implements ClienteDao{

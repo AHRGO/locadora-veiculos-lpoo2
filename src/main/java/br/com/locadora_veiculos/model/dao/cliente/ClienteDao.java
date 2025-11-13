@@ -1,6 +1,7 @@
-package br.com.locadora_veiculos.model.dao;
+package br.com.locadora_veiculos.model.dao.cliente;
 
 import br.com.locadora_veiculos.model.Cliente;
+import br.com.locadora_veiculos.model.dao.Dao;
 
 import java.util.List;
 
