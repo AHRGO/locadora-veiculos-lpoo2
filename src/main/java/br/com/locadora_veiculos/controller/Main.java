@@ -1,6 +1,6 @@
 package br.com.locadora_veiculos.controller;
 
-import br.com.locadora_veiculos.model.dao.cliente.ClienteDao;
+import br.com.locadora_veiculos.model.cliente.dao.ClienteDao;
 import br.com.locadora_veiculos.model.dao.DaoFactory;
 import br.com.locadora_veiculos.view.cliente.JanelaClienteView;
 

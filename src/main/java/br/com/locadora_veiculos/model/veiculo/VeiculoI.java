@@ -1,6 +1,6 @@
-package br.com.locadora_veiculos.model;
+package br.com.locadora_veiculos.model.veiculo;
 
-import br.com.locadora_veiculos.model.Cliente;
+import br.com.locadora_veiculos.model.cliente.Cliente;
 
 import java.util.Calendar;
 

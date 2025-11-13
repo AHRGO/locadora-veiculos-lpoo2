@@ -1,6 +1,7 @@
-package br.com.locadora_veiculos.model.dao.cliente;
+package br.com.locadora_veiculos.model.cliente.dao;
 
-import br.com.locadora_veiculos.model.Cliente;
+import br.com.locadora_veiculos.model.cliente.Cliente;
+import br.com.locadora_veiculos.model.dao.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

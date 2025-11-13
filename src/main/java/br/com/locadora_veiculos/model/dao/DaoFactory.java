@@ -1,7 +1,7 @@
 package br.com.locadora_veiculos.model.dao;
 
-import br.com.locadora_veiculos.model.dao.cliente.ClienteDao;
-import br.com.locadora_veiculos.model.dao.cliente.ClienteDaoSql;
+import br.com.locadora_veiculos.model.cliente.dao.ClienteDao;
+import br.com.locadora_veiculos.model.cliente.dao.ClienteDaoSql;
 
 public class DaoFactory {
     private DaoFactory() {}

@@ -2,7 +2,7 @@ package br.com.locadora_veiculos.view.cliente;
 
 
 import br.com.locadora_veiculos.controller.ClienteController;
-import br.com.locadora_veiculos.model.Cliente;
+import br.com.locadora_veiculos.model.cliente.Cliente;
 
 import javax.swing.*;
 import java.awt.*;

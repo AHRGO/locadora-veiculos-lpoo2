@@ -1,4 +1,4 @@
-package br.com.locadora_veiculos.model;
+package br.com.locadora_veiculos.model.cliente;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,7 +1,7 @@
 package br.com.locadora_veiculos.controller;
 
-import br.com.locadora_veiculos.model.Cliente;
-import br.com.locadora_veiculos.model.dao.cliente.ClienteDao;
+import br.com.locadora_veiculos.model.cliente.Cliente;
+import br.com.locadora_veiculos.model.cliente.dao.ClienteDao;
 import br.com.locadora_veiculos.view.cliente.JanelaClienteView;
 
 import java.util.List;
