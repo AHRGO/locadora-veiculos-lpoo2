@@ -6,16 +6,21 @@ import br.com.locadora_veiculos.model.veiculo.enums.Marca;
 import br.com.locadora_veiculos.model.veiculo.enums.ModeloAutomovel;
 
 public class Automovel extends Veiculo {
+    private Long id;
     private ModeloAutomovel modelo;
+
+    public Automovel(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, Long veiculoId, ModeloAutomovel modelo) {
+        super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
+        this.id = veiculoId;
+        this.modelo = modelo;
+    }
 
     public Automovel(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloAutomovel modelo) {
         super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
         this.modelo = modelo;
     }
 
-    public ModeloAutomovel getModelo() {
-        return this.modelo;
-    }
+
 
     @Override
     public double getValorDiariaLocacao() {
@@ -25,4 +30,48 @@ public class Automovel extends Veiculo {
             case LUXO -> 450.00;
         };
     }
+
+
+
+    public ModeloAutomovel getModelo() {
+        return this.modelo;
+    }
+
+
+    public Long getVeiculoId() {
+        return this.id;
+    }
+    public void setVeiculoId(Long veiculoId) {
+        this.id = veiculoId;
+    }
+
+
+
+    public static Automovel convertFromDao(ResultSet result) throws SQLException {
+        Long id = result.getLong("id_veiculo");
+        Marca marca = Marca.fromString(result.getString("marca"));
+        Estado estado = Estado.fromString(result.getString("estado"));
+        Categoria categoria = Categoria.fromString(result.getString("categoria"));
+        ModeloAutomovel modelo = ModeloAutomovel.fromString(result.getString("modelo"));
+        double valorDaCompra = result.getDouble("valor_compra");
+        String placa = result.getString("placa");
+        int ano = result.getInt("ano");
+
+        Locacao locacao = new Locacao();
+
+        return new Automovel(locacao, marca, estado, categoria, valorDaCompra, placa, ano, id, modelo);
+    }
+
+
+    public static List<Automovel> converListFromDao(ResultSet result) throws SQLException {
+        List<Automovel> automoveis = new ArrayList<>();
+
+        while (result.next()) {
+            automoveis.add(Automovel.convertFromDao(result));
+        }
+
+        return automoveis;
+    }
+
+
 }
