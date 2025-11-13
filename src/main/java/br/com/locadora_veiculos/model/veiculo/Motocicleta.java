@@ -5,6 +5,11 @@ import br.com.locadora_veiculos.model.veiculo.enums.Estado;
 import br.com.locadora_veiculos.model.veiculo.enums.Marca;
 import br.com.locadora_veiculos.model.veiculo.enums.ModeloMotocicleta;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Motocicleta extends Veiculo {
     private Long id;
     private ModeloMotocicleta modelo;
@@ -31,8 +36,6 @@ public class Motocicleta extends Veiculo {
         };
     }
 
-
-
     public ModeloMotocicleta getModelo() {
         return this.modelo;
     }
@@ -46,7 +49,6 @@ public class Motocicleta extends Veiculo {
     }
 
 
-
     public static Motocicleta convertFromDao(ResultSet result) throws SQLException {
         Long id = result.getLong("id_veiculo");
         Marca marca = Marca.fromString(result.getString("marca"));
@@ -57,7 +59,7 @@ public class Motocicleta extends Veiculo {
         String placa = result.getString("placa");
         int ano = result.getInt("ano");
 
-        Locacao locacao = new Locacao();
+        Locacao locacao = new Locacao(0, 0.0, null, null);
 
         return new Motocicleta(locacao, marca, estado, categoria, valorDaCompra, placa, ano, id, modelo);
     }
