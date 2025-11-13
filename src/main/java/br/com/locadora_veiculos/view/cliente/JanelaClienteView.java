@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class JanelaClienteView extends javax.swing.JFrame {
+public class JanelaClienteView extends JPanel {
     private BotoesClienteView botoesClienteView;
     private FormularioClienteView formularioClienteView;
     private TabelaClienteView tabelaClienteView;
@@ -46,10 +46,11 @@ public class JanelaClienteView extends javax.swing.JFrame {
         formularioClienteView = new FormularioClienteView();
         tabelaClienteView = new TabelaClienteView();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        GroupLayout layout = new GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        GroupLayout layout = new GroupLayout(this);
+        this.setLayout(layout);
+//        getContentPane().setLayout(layout);
 
         layout.setHorizontalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -79,7 +80,7 @@ public class JanelaClienteView extends javax.swing.JFrame {
             )
         );
 
-        pack();
+//        pack();
 
     }
 
