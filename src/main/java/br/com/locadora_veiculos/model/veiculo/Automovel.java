@@ -5,15 +5,22 @@ import br.com.locadora_veiculos.model.veiculo.enums.Estado;
 import br.com.locadora_veiculos.model.veiculo.enums.Marca;
 import br.com.locadora_veiculos.model.veiculo.enums.ModeloAutomovel;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Automovel extends Veiculo {
     private Long id;
     private ModeloAutomovel modelo;
+
 
     public Automovel(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, Long veiculoId, ModeloAutomovel modelo) {
         super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
         this.id = veiculoId;
         this.modelo = modelo;
     }
+
 
     public Automovel(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloAutomovel modelo) {
         super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
@@ -57,7 +64,7 @@ public class Automovel extends Veiculo {
         String placa = result.getString("placa");
         int ano = result.getInt("ano");
 
-        Locacao locacao = new Locacao();
+        Locacao locacao = new Locacao(0, 0.0, null, null);
 
         return new Automovel(locacao, marca, estado, categoria, valorDaCompra, placa, ano, id, modelo);
     }
