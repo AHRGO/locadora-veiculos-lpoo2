@@ -17,17 +17,6 @@ public class BotoesClienteView extends JPanel {
 
 
     private void initComponents() {
-        inicializarBotoes();
-
-        GroupLayout layout = new GroupLayout(this);
-        this.setLayout(layout);
-
-        criarGrupoHorizontal(layout);
-        criarGrupoVertical(layout);
-
-    }
-
-    private void inicializarBotoes() {
         botaoCriar = new JButton();
         botaoListar = new JButton();
         botaoAtualizar = new JButton();
@@ -37,6 +26,16 @@ public class BotoesClienteView extends JPanel {
         botaoListar.setText("Listar");
         botaoAtualizar.setText("Atualizar");
         botaoExcluir.setText("Excluir");
+
+        desenharPanel();
+    }
+
+    private void desenharPanel() {
+        GroupLayout layout = new GroupLayout(this);
+        this.setLayout(layout);
+
+        criarGrupoHorizontal(layout);
+        criarGrupoVertical(layout);
     }
 
     private void criarGrupoHorizontal(GroupLayout layout) {

@@ -12,7 +12,6 @@ public class TelaPrincipalView extends JFrame {
         return janelaClientView;
     }
 
-    //TODO: MELHORAR FLUXO DE INICIALIZAÇÃO PARA NÃO PRECISAR PASSAR POR PARÂMETRO
     public TelaPrincipalView() {
         initComponents();
     }

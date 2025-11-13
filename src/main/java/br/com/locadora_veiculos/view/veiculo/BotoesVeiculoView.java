@@ -11,21 +11,21 @@ public class BotoesVeiculoView extends JPanel {
     }
 
     private void initComponents() {
-        inicializarBotoes();
-
-        GroupLayout layout = new GroupLayout(this);
-        this.setLayout(layout);
-
-        criarGrupoHorizontal(layout);
-        criarGrupoVertical(layout);
-    }
-
-    private void inicializarBotoes() {
         botaoListar = new JButton();
         botaoCriar = new JButton();
 
         botaoListar.setText("Listar");
         botaoCriar.setText("Criar");
+
+        desenharPanel();
+    }
+
+    private void desenharPanel() {
+        GroupLayout layout = new GroupLayout(this);
+        this.setLayout(layout);
+
+        criarGrupoHorizontal(layout);
+        criarGrupoVertical(layout);
     }
 
     private void criarGrupoHorizontal(GroupLayout layout) {

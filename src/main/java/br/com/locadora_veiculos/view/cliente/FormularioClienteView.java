@@ -7,10 +7,9 @@ import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 
-public class FormularioClienteView extends javax.swing.JPanel {
+public class FormularioClienteView extends JPanel {
     private Cliente clienteSelecionadoParaAtualizacao;
 
-//    private JTextField campoId; ???
     private JTextField campoNome;
     private JTextField campoSobrenome;
     private JFormattedTextField campoRg;
@@ -57,76 +56,86 @@ public class FormularioClienteView extends javax.swing.JPanel {
             e.printStackTrace();
         }
 
+        desenharPanel();
+    }
+
+    private void desenharPanel() {
         GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
 
+        criarGrupoHorizontal(layout);
+        criarGrupoVertical(layout);
+    }
 
+    private void criarGrupoHorizontal(GroupLayout layout) {
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelNome)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoNome)
-                    )
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelSobrenome)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoSobrenome)
-                    )
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelRg)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoRg)
-                    )
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelCpf)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoCpf)
-                    )
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(labelEndereco)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoEndereco)
-                    )
-                )
-                .addContainerGap()
-            )
-            
-        );
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(labelNome)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(campoNome)
+                                        )
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(labelSobrenome)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoSobrenome)
+                                        )
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(labelRg)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoRg)
+                                        )
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(labelCpf)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoCpf)
+                                        )
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(labelEndereco)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoEndereco)
+                                        )
+                                )
+                                .addContainerGap()
+                        )
 
+        );
+    }
+
+    private void criarGrupoVertical(GroupLayout layout) {
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelNome)
-                        .addComponent(campoNome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
-                )
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelSobrenome)
-                    .addComponent(campoSobrenome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
-                )
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelRg)
-                    .addComponent(campoRg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
-                )
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCpf)
-                    .addComponent(campoCpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
-                )
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelEndereco)
-                    .addComponent(campoEndereco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
-                )
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-            )
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(labelNome)
+                                        .addComponent(campoNome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                                )
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(labelSobrenome)
+                                        .addComponent(campoSobrenome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                                )
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(labelRg)
+                                        .addComponent(campoRg, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                                )
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(labelCpf)
+                                        .addComponent(campoCpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                                )
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(labelEndereco)
+                                        .addComponent(campoEndereco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
+                                )
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        )
         );
     }
 

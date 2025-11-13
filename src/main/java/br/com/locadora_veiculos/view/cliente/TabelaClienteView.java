@@ -8,13 +8,13 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabelaClienteView extends javax.swing.JPanel {
+public class TabelaClienteView extends JPanel {
     private ClienteTableModel clienteTableModel = new ClienteTableModel();
     private JanelaClienteView janela;
     private int linhaClicadaParaAtualizacao = -1;
 
-    private JScrollPane scrollPane; //javax.swing.JScrollPane
-    private JTable tabelaCliente; //javax.swing.JTable
+    private JScrollPane scrollPane;
+    private JTable tabelaCliente;
 
     public TabelaClienteView() {
         initComponents();

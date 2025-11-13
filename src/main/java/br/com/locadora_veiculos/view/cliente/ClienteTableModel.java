@@ -51,7 +51,6 @@ public class ClienteTableModel extends AbstractTableModel {
 
     public void adicionaCliente(Cliente cliente) {
         this.linhas.add(cliente);
-//        this.fireTableDataChanged(); ?? this shit works?? try it later
         this.fireTableRowsInserted(linhas.size()-1, linhas.size()-1);
     }
 
