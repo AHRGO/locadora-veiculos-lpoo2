@@ -3,9 +3,31 @@ public class FormularioInserirVeiculoView extends JPanel {
     //private Cliente clienteSelecionadoParaAtualizacao;
 
     private JTextField campoMarca;
- //Alterar para ComboBox    private JTextField campoSobrenome;
-    private JFormattedTextField campoRg;
-    private JFormattedTextField campoCpf;
+ //Alterar para ComboBox    
+
+private JTextField campoTipoVeiculo; //Alterar para ComboBox
+
+
+    private JFormattedTextField campoPlaca; //Adicionar validador + mascara
+
+
+    private JFormattedTextField campoModeloVeiculo; //Alterar para ComboBox; depende do tipo do veículo 
+
+//TODO: Criar método que itera por sobre os enums e devolve uma lista de Strings, sendo esta o textoExibicao
+
+/*
+uma possível implementação é:
+ter um tipo de lista (provavelmente String) que contenha, genericamente, os modelos.
+
+inicializar essa lista antes
+
+conforme mudam-se os valores, são carregados os modelos específicos do veiculo nessa lista
+
+
+*/
+
+//Quaisquer outros campos necessários
+
     private JTextField campoEndereco;
     private JLabel labelNome;
     private JLabel labelSobrenome;
