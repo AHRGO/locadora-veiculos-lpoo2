@@ -34,16 +34,35 @@ public class TelaPrincipalView extends JFrame {
         abaClientes.add(janelaClient);
 
         JPanel abaVeiculos = new JPanel();
-        abaVeiculos.add(new JLabel("O conteúdo da tela de Veículos será disponibilizado em breve"));
-
-        JPanel abaLocacao = new JPanel();
-        abaLocacao.add(new JLabel("O conteúdo da tela de Locação será disponibilizado em breve"));
+        abaVeiculos.add(criaAbaVeiculos());
 
 
         abas.addTab("Clientes", abaClientes);
         abas.addTab("Veículos", abaVeiculos);
-        abas.addTab("Locação", abaLocacao);
 
         return abas;
+    }
+
+    private JTabbedPane criaAbaVeiculos() {
+        JTabbedPane abaVeiculos = new JTabbedPane();
+
+        JPanel abaAdicionar = new JPanel();
+        abaAdicionar.add(new JLabel("O conteúdo desta tela será disponibilizado em breve"));
+
+        JPanel abaLocar = new JPanel();
+        abaLocar.add(new JLabel("O conteúdo desta tela será disponibilizado em breve"));
+
+        JPanel abaDevolver = new JPanel();
+        abaDevolver.add(new JLabel("O conteúdo desta tela será disponibilizado em breve"));
+
+        JPanel abaVender = new JPanel();
+        abaVender.add(new JLabel("O conteúdo desta tela será disponibilizado em breve"));
+
+        abaVeiculos.addTab("Incluir Novos Veículos", abaAdicionar);
+        abaVeiculos.addTab("Locar Veículos", abaLocar);
+        abaVeiculos.addTab("Devolver Veículos", abaDevolver);
+        abaVeiculos.addTab("Vender Veículos", abaVender);
+
+        return abaVeiculos;
     }
 }
