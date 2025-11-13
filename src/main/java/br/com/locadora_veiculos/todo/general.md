@@ -1,0 +1,1 @@
+# 1. Trocar todos entityId por idEntity (incluir limpar tabelas no banco)
