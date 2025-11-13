@@ -7,10 +7,12 @@ import br.com.locadora_veiculos.view.cliente.JanelaClienteView;
 
 public class Main {
     public static void main(String[] args) {
-        JanelaClienteView view = new JanelaClienteView();
+        TelaPrincipalView telaPrincipal = new TelaPrincipalView();
+
         ClienteDao model = DaoFactory.getClienteDao();
-        ClienteController controller = new ClienteController(view, model);
-        TelaPrincipalView telaPrincipal = new TelaPrincipalView(view);
+        JanelaClienteView clienteView = telaPrincipal.getClienteView();
+        ClienteController controller = new ClienteController(clienteView, model);
+
 
     }
 }

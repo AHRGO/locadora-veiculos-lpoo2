@@ -6,15 +6,25 @@ import javax.swing.*;
 import java.awt.*;
 
 public class TelaPrincipalView extends JFrame {
+    private JanelaClienteView janelaClientView;
+
+    public JanelaClienteView getClienteView() {
+        return janelaClientView;
+    }
 
     //TODO: MELHORAR FLUXO DE INICIALIZAÇÃO PARA NÃO PRECISAR PASSAR POR PARÂMETRO
-    public TelaPrincipalView(JanelaClienteView janelaClient) {
+    public TelaPrincipalView() {
+        initComponents();
+    }
+
+    private void initComponents() {
+        janelaClientView = new JanelaClienteView();
+
         setTitle("Locadora de Veículos");
         setSize(800,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JTabbedPane abas = criaAbas(janelaClient);
-        add(abas, BorderLayout.CENTER);
+        add(criaAbas(janelaClientView), BorderLayout.CENTER);
         setVisible(true);
     }
 
