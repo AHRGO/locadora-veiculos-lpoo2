@@ -2,6 +2,7 @@ package br.com.locadora_veiculos.view.veiculo;
 
 import javax.swing.*;
 
+//TODO: MUDAR DEPOIS PARA BOTOES INCLUIR VEICULO VIEW
 public class BotoesVeiculoView extends JPanel {
     private JButton botaoListar;
     private JButton botaoCriar;
