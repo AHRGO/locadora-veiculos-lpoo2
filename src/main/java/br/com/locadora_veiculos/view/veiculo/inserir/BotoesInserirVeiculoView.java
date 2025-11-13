@@ -1,4 +1,4 @@
-package br.com.locadora_veiculos.view.veiculo;
+package br.com.locadora_veiculos.view.veiculo.inserir;
 
 import javax.swing.*;
 

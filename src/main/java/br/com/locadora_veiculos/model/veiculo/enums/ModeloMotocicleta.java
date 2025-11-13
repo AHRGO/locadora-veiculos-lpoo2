@@ -19,7 +19,7 @@ public enum ModeloMotocicleta {
         return nomeExibicao;
     }
 
-    public ModeloMotocicleta fromString(String nome) {
+    public static ModeloMotocicleta fromString(String nome) {
         for(ModeloMotocicleta modelo : ModeloMotocicleta.values()) {
             if(modelo.name().equalsIgnoreCase(nome)) return modelo;
         }

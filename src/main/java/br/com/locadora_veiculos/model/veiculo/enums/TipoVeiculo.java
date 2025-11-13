@@ -20,7 +20,7 @@ public enum TipoVeiculo {
         return nomeExibicao;
     }
 
-    public TipoVeiculo fromString(String nome) {
+    public static TipoVeiculo fromString(String nome) {
         for(TipoVeiculo veiculo : TipoVeiculo.values()) {
             if(veiculo.name().equalsIgnoreCase(nome)) return veiculo;
         }

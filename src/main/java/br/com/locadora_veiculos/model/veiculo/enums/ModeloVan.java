@@ -19,7 +19,7 @@ public enum ModeloVan {
         return nomeExibicao;
     }
 
-    public ModeloVan fromString(String nome) {
+    public static ModeloVan fromString(String nome) {
         for(ModeloVan van : ModeloVan.values()) {
             if(van.name().equalsIgnoreCase(nome)) return van;
         }

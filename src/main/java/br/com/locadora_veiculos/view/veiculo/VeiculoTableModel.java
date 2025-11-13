@@ -1,4 +1,10 @@
+package br.com.locadora_veiculos.view.veiculo;
 
+import br.com.locadora_veiculos.model.veiculo.Veiculo;
+
+import javax.swing.table.AbstractTableModel;
+import java.util.ArrayList;
+import java.util.List;
 
 //TODO: VALIDAR IMPLEMENTAÇÃO DA CLASSE
 public class VeiculoTableModel extends AbstractTableModel {
@@ -35,13 +41,13 @@ public class VeiculoTableModel extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         Veiculo veiculo = this.linhas.get(rowIndex);
         return switch(columnIndex) {
-            case 0 -> veiculo.getId();
+//            case 0 -> veiculo.getId(); => TODO: VALIDAR COMO VAI PEGAR O ID DO VEÍCULO
             // case 1 -> veiculo.getTipo(); => TODO: VALIDAR COMO VAI PEGAR O TIPO DO VEÍCULO
             case 1 -> veiculo.getMarca().name();
             case 2 -> veiculo.getEstado().name();
             case 3 -> veiculo.getCategoria().name();
-            case 4 -> veiculo.getModelo().name();
-            case 5 -> veiculo.getValorDaCompra();
+//            case 4 -> veiculo.getModelo().name(); => TODO: VALIDAR COMO VAI PEGAR O MODELO DO VEÍCULO
+//            case 5 -> veiculo.getValorDaCompra(); => TODO: VALIDAR COMO VAI PEGAR O VALOR DO VEÍCULO
             case 6 -> veiculo.getPlaca();
             case 7 -> veiculo.getAno();
             default -> null;
