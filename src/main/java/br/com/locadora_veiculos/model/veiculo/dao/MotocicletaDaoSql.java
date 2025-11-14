@@ -13,7 +13,7 @@ public class MotocicletaDaoSql implements VeiculoDao<Motocicleta> {
     private ConnectionFactory connectionFactory;
     private static MotocicletaDaoSql motocicletaDao;
 
-    private final String insert = "A SQL QUERY";
+    private final String insert = "INSERT INTO veiculo (tipo, marca, estado, categoria, modelo, valor_compra, placa, ano) VALUES (?,?,?,?,?,?,?,?)";
     private final String selectAll = "A SQL QUERY";
     private final String selectById = "A SQL QUERY";
     private final String update = "A SQL QUERY";
@@ -42,7 +42,7 @@ public class MotocicletaDaoSql implements VeiculoDao<Motocicleta> {
             insertStatement.setString(3, motocicleta.getEstado().name());
             insertStatement.setString(4, motocicleta.getCategoria().name());
             insertStatement.setString(5, motocicleta.getModelo().name());
-//            insertStatement.setDouble(6, motocicleta.getValorDaCompra());
+            insertStatement.setDouble(6, motocicleta.getValorDaCompra());
             insertStatement.setString(7, motocicleta.getPlaca());
             insertStatement.setInt(8, motocicleta.getAno());
 

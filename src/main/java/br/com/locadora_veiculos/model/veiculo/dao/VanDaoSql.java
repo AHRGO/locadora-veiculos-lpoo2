@@ -13,7 +13,7 @@ public class VanDaoSql implements VeiculoDao<Van> {
     private ConnectionFactory connectionFactory;
     private static VanDaoSql vanDao;
 
-    private final String insert = "A SQL QUERY";
+    private final String insert = "INSERT INTO veiculo (tipo, marca, estado, categoria, modelo, valor_compra, placa, ano) VALUES (?,?,?,?,?,?,?,?)";
     private final String selectAll = "A SQL QUERY";
     private final String selectById = "A SQL QUERY";
     private final String update = "A SQL QUERY";
@@ -42,7 +42,7 @@ public class VanDaoSql implements VeiculoDao<Van> {
             insertStatement.setString(3, van.getEstado().name());
             insertStatement.setString(4, van.getCategoria().name());
             insertStatement.setString(5, van.getModelo().name());
-//            insertStatement.setDouble(6, van.getValorDaCompra());
+            insertStatement.setDouble(6, van.getValorDaCompra());
             insertStatement.setString(7, van.getPlaca());
             insertStatement.setInt(8, van.getAno());
 
