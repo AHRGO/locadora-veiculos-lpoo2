@@ -77,6 +77,11 @@ public abstract class Veiculo implements VeiculoI {
         return this.ano;
     }
 
+
+    public double getValorDaCompra() {
+        return this.valorDaCompra;
+    }
+
     @Override
     public double getValorParaVenda() {
         double valorCompra = this.valorDaCompra;
