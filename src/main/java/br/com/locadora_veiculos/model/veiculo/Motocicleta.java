@@ -17,8 +17,9 @@ public class Motocicleta extends Veiculo {
         this.modelo = modelo;
     }
 
-    public Motocicleta(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloMotocicleta modelo) {
-        super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
+    //Modelo para salvar no BD
+    public Motocicleta(Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloMotocicleta modelo) {
+        super(null, marca, estado, categoria, valorDaCompra, placa, ano);
         this.modelo = modelo;
     }
 

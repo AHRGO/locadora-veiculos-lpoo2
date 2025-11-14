@@ -9,7 +9,7 @@ import br.com.locadora_veiculos.view.cliente.JanelaClienteView;
 public class Main {
     public static void main(String[] args) {
         VeiculoController veiculoController = new VeiculoController();
-//        veiculoController.criarVeiculo(); => FUNCIONANDO
+        veiculoController.criarVeiculo();
 
         TelaPrincipalView telaPrincipal = new TelaPrincipalView();
 

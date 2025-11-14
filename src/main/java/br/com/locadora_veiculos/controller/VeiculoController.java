@@ -37,7 +37,10 @@ public class VeiculoController {
 
     public void criarVeiculo() {
         try {
-            Veiculo veiculo = VeiculoMock.mockAutomovelUm();
+//            Veiculo veiculo = VeiculoMock.mockAutomovelUm();
+            Veiculo veiculo = VeiculoMock.mockVanUm();
+//            Veiculo veiculo = VeiculoMock.mockMotocicletaUm();
+//            Veiculo veiculo = VeiculoMock.mockAutomovelDois();
             TipoVeiculo tipo = getTipoVeiculo(veiculo);
 
             switch(tipo) {

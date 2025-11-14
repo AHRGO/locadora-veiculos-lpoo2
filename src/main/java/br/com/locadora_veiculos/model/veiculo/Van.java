@@ -17,8 +17,9 @@ public class Van extends Veiculo {
         this.modelo = modelo;
     }
 
-    public Van(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloVan modelo) {
-        super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
+    //Modelo para salvar no BD
+    public Van(Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloVan modelo) {
+        super(null, marca, estado, categoria, valorDaCompra, placa, ano);
         this.modelo = modelo;
     }
 
