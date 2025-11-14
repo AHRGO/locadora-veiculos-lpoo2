@@ -36,13 +36,21 @@ public class Automovel extends Veiculo {
     }
 
 
+    public TipoVeiculo getTipo() {
+        return TipoVeiculo.AUTOMOVEL;
+    }
 
     public ModeloAutomovel getModelo() {
         return this.modelo;
     }
 
-    public TipoVeiculo getTipo() {
-        return TipoVeiculo.AUTOMOVEL;
+    public List<String> getModelos() {
+        List<String> modelos = new ArrayList<>();
+        for(ModeloAutomovel modelo : ModeloAutomovel.values()) {
+            modelos.add(modelo.getNomeExibicao());
+        }
+
+        return modelos;
     }
 
 

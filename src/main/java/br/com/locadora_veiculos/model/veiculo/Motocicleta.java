@@ -33,12 +33,22 @@ public class Motocicleta extends Veiculo {
         };
     }
 
+
+    public TipoVeiculo getTipo() {
+        return TipoVeiculo.MOTOCICLETA;
+    }
+
     public ModeloMotocicleta getModelo() {
         return this.modelo;
     }
 
-    public TipoVeiculo getTipo() {
-        return TipoVeiculo.MOTOCICLETA;
+    public List<String> getModelos() {
+        List<String> modelos = new ArrayList<>();
+        for(ModeloMotocicleta modelo : ModeloMotocicleta.values()) {
+            modelos.add(modelo.getNomeExibicao());
+        }
+
+        return modelos;
     }
 
 

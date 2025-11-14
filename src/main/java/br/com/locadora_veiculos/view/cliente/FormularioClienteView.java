@@ -8,7 +8,7 @@ import javax.swing.text.MaskFormatter;
 import java.text.ParseException;
 
 public class FormularioClienteView extends JPanel {
-    private Cliente clienteSelecionadoParaAtualizacao;
+    private Cliente clienteSelecionado;
 
     private JTextField campoNome;
     private JTextField campoSobrenome;
@@ -140,7 +140,7 @@ public class FormularioClienteView extends JPanel {
     }
 
     public void setCliente(Cliente cliente) {
-        this.clienteSelecionadoParaAtualizacao = cliente;
+        this.clienteSelecionado = cliente;
         campoNome.setText(cliente.getNome());
         campoSobrenome.setText(cliente.getSobrenome());
         campoRg.setText(cliente.getRg());
@@ -149,19 +149,19 @@ public class FormularioClienteView extends JPanel {
     }
 
     public void limparClienteParaAtualizar() {
-        clienteSelecionadoParaAtualizacao = null;
+        clienteSelecionado = null;
     }
 
     public Cliente getClienteParaAtualizar() {
-        if(clienteSelecionadoParaAtualizacao == null) return null;
+        if(clienteSelecionado == null) return null;
 
-        clienteSelecionadoParaAtualizacao.setNome(campoNome.getText());
-        clienteSelecionadoParaAtualizacao.setSobrenome(campoSobrenome.getText());
-        clienteSelecionadoParaAtualizacao.setRg(campoRg.getText());
-        clienteSelecionadoParaAtualizacao.setCpf(campoCpf.getText());
-        clienteSelecionadoParaAtualizacao.setEndereco(campoEndereco.getText());
+        clienteSelecionado.setNome(campoNome.getText());
+        clienteSelecionado.setSobrenome(campoSobrenome.getText());
+        clienteSelecionado.setRg(campoRg.getText());
+        clienteSelecionado.setCpf(campoCpf.getText());
+        clienteSelecionado.setEndereco(campoEndereco.getText());
 
-        return clienteSelecionadoParaAtualizacao;
+        return clienteSelecionado;
     }
 
     public Cliente getClienteFormulario() {

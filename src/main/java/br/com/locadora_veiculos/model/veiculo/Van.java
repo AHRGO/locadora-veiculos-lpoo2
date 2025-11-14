@@ -33,13 +33,21 @@ public class Van extends Veiculo {
     }
 
 
+    public TipoVeiculo getTipo() {
+        return TipoVeiculo.VAN;
+    }
 
     public ModeloVan getModelo() {
         return this.modelo;
     }
 
-    public TipoVeiculo getTipo() {
-        return TipoVeiculo.VAN;
+    public List<String> getModelos() {
+        List<String> modelos = new ArrayList<>();
+        for(ModeloVan modelo : ModeloVan.values()) {
+            modelos.add(modelo.getNomeExibicao());
+        }
+
+        return modelos;
     }
 
 
