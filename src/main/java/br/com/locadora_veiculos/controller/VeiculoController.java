@@ -15,7 +15,7 @@ import br.com.locadora_veiculos.model.veiculo.mock.VeiculoMock;
 public class VeiculoController {
     //TODO: IMPLEMENTAR VIEW
     //    private VeiculoView view;
-    private VeiculoDao dao;
+//    private VeiculoDao dao;
 
     AutomovelDaoSql automovelDao;
     MotocicletaDaoSql motocicletaDao;
@@ -24,10 +24,10 @@ public class VeiculoController {
 
     public VeiculoController(
 //            VeiculoView view,
-        VeiculoDao dao
+//        VeiculoDao dao
     ) {
 //        this.view = view;
-        this.dao = dao;
+//        this.dao = dao;
         initController();
     }
 
