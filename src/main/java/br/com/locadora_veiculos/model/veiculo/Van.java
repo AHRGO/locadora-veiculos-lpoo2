@@ -1,9 +1,6 @@
 package br.com.locadora_veiculos.model.veiculo;
 
-import br.com.locadora_veiculos.model.veiculo.enums.Categoria;
-import br.com.locadora_veiculos.model.veiculo.enums.Estado;
-import br.com.locadora_veiculos.model.veiculo.enums.Marca;
-import br.com.locadora_veiculos.model.veiculo.enums.ModeloVan;
+import br.com.locadora_veiculos.model.veiculo.enums.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,6 +36,10 @@ public class Van extends Veiculo {
 
     public ModeloVan getModelo() {
         return this.modelo;
+    }
+
+    public TipoVeiculo getTipo() {
+        return TipoVeiculo.VAN;
     }
 
 
