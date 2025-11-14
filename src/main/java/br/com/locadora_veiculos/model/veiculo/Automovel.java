@@ -18,9 +18,9 @@ public class Automovel extends Veiculo {
         this.modelo = modelo;
     }
 
-
-    public Automovel(Locacao locacao, Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloAutomovel modelo) {
-        super(locacao, marca, estado, categoria, valorDaCompra, placa, ano);
+    //Modelo para salvar no BD
+    public Automovel(Marca marca, Estado estado, Categoria categoria, double valorDaCompra, String placa, int ano, ModeloAutomovel modelo) {
+        super(null, marca, estado, categoria, valorDaCompra, placa, ano);
         this.modelo = modelo;
     }
 
